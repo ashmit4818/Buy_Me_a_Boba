@@ -723,21 +723,6 @@ padding: var(--space-4);
 }
 
 
-/*-----------------------------------*\
-  #COMPLETE ORDER PAGE
-\*-----------------------------------*/
-.return-btn {
-  background-color: #007bff; /* Bootstrap primary color */
-  color: white;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-}
-
-.return-btn:hover {
-  background-color: #0056b3; /* Darker shade on hover */
-}
 
 
 

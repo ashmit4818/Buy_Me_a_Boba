@@ -43,8 +43,14 @@ app.get('/complete-order', async (req, res) => {
             <!DOCTYPE html>
             <html lang="en">
             <head>
+                <link rel="shortcut icon" href="/images/bobaaa.svg" type="image/svg+xml">
                 <title>Order Confirmation - BuyMeABoba</title>
                 <link rel="stylesheet" href="/css/style.css"> 
+                <style>
+                 article { text-align: center; margin-top:5%; }
+                 p { margin-top: 3%; margin-bottom:3% }
+                 .button-container{ width:fit-content; margin:auto; }
+                </style>
             </head>
             <body class="background on-surface-text">
                 <header class="top-bar">
@@ -55,7 +61,7 @@ app.get('/complete-order', async (req, res) => {
                     </div>
                 </header>
                 <main class="main">
-                    <article>
+                    <article >
                         <section class="container">
                             <h1 class="title-large">Thank You for Your Contribution!</h1>
                             <p class="body-medium">Your order has been processed successfully.</p>
