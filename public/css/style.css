@@ -1,10 +1,6 @@
-/*-----------------------------------*\
-  #style.css
-\*-----------------------------------*/
 
-/**
- * copyright 2024 ashmit4818
- */
+  /* #style.css */
+/* copyright 2024 ashmit4818 */
 
 /*-----------------------------------*\
   #CUSTOM PROPERTY
@@ -12,9 +8,7 @@
 
 :root {
 
-  /**
-   * COLORS
-   */
+  /* color */
 
   --primary: rgb(161 201 255);
   --on-primary: rgb(0 50 91);
@@ -34,7 +28,7 @@
   --outline: rgb(137 145 158);
   --outline-variant: rgb(64 71 83);
   --surface-container-low: rgb(24 28 34);
-  --surface-container-high: rgb(38 42 49);
+  --surface-container-high: rgb(23, 25, 27);
   --avatar: #FFEFB5;
   --on-avatar: #61521C;
 
@@ -93,9 +87,7 @@
   --ls-p-040: 0.40px;
   --ls-p-050: 0.50px;
 
-  /**
-   * SPACING
-   */
+ /* spacing */
   
   --space-base: 4px;
   --space-05: calc(var(--space-base) * 0.5);
@@ -120,9 +112,7 @@
   --space-19: calc(var(--space-base) * 19);
   --space-20: calc(var(--space-base) * 20);
 
-  /**
-  * BOX SHADOW
-  */
+  /* box shadow */
 
   --shadow-1: 0px 1px 3px 1px #00000026, 0px 1px 2px 0px #0000004d;
   --shadow-2: 0px 2px 6px 2px #00000026, 0px 1px 2px 0px #0000004d;
@@ -130,9 +120,7 @@
   --shadow-4: 0px 2px 3px 0px #0000004d, 0px 6px 10px 4px #00000026;
   --shadow-5: 0px 4px 4px 0px #0000004d, 0px 8px 12px 6px #00000026;
 
-  /**
-  * BORDER RADIUS
-  */
+  /* border radius */
 
   --radius-extra-small: 4px;
   --radius-small: 8px;
@@ -141,9 +129,7 @@
   --radius-extra-large: 28px;
   --radius-full: 1000px;
 
-  /**
-  * TRANSITION
-  */
+  /* transition */
   
   --tr-duration-short-1: 50ms;
   --tr-duration-short-2: 100ms;
@@ -369,9 +355,7 @@ textarea{
   #COMPONENTS
 \*-----------------------------------*/
 
-/**
- * Top bar
- */
+/* top bar */
  .top-bar{
   height: 64px;
  }
@@ -382,10 +366,8 @@ textarea{
  place-items: center;
 }
 
-/**
- * card
- */
 
+/* card */
  .card{
   padding: var(--space-4);
   border-radius: var(--radius-medium);
@@ -401,9 +383,8 @@ textarea{
   border: 1px solid var(--outline);
 }
 
-/**
- * Icon button
- */
+
+/* icon btn */
  .icon-btn{
   width: 40px;
   height: 40px;
@@ -419,10 +400,7 @@ textarea{
 }
 
 
-/**
- * Text field
- */
-
+/* text field */
  .text-field-wrapper{
   position: relative;
   padding: var(--space-05);
@@ -472,9 +450,7 @@ textarea{
 
  .text-field:where(:focus, :focus-visible)::placeholder{opacity: 1;}
 
-/**
- * Button
- */
+/* button */
 .button{
   height: 40px;
   display: flex;
@@ -503,7 +479,8 @@ textarea{
 \*-----------------------------------*/
 
 .background{
-  background-color: var(--background);
+  background: rgb(15,15,15);
+background: linear-gradient(45deg, rgba(15,15,15,1) 0%, rgba(7,22,35,1) 50%, rgba(15,15,15,1) 100%);
 }
 .on-surface-text{
   color: var(--on-surface);
@@ -621,6 +598,11 @@ user-select: none;
   #CONTRIBUTE
 \*-----------------------------------*/
 
+.contribute{
+  background: rgb(15,15,15);
+background: linear-gradient(45deg, rgba(15,15,15,1) 0%, rgba(3,28,48,1) 50%, rgba(15,15,15,1) 100%);
+}
+
 .contribute-form{
   display: grid;
   gap: var(--space-2);
@@ -662,6 +644,10 @@ user-select: none;
   #ABOUT
 \*-----------------------------------*/
 
+.about{
+  background: rgb(15,15,15);
+  background: linear-gradient(45deg, rgba(15,15,15,1) 0%, rgba(3,24,42,1) 50%, rgba(15,15,15,1) 100%);
+}
 .social-list{
   display: flex;
   align-items: center;
@@ -673,10 +659,16 @@ user-select: none;
 /*-----------------------------------*\
   #HISTORY
 \*-----------------------------------*/
+
+.history{
+  background: rgb(15,15,15);
+background: linear-gradient(45deg, rgba(15,15,15,1) 0%, rgba(3,24,42,1) 50%, rgba(15,15,15,1) 100%);
+}
 .history-card{
   display: grid;
   padding-block: var(--space-2);
   gap: var(--space-2);
+  
 }
 
 .history-card .card-header{
@@ -760,6 +752,7 @@ padding: var(--space-4);
     order: 1;
     position: sticky;
     top: var(--space-4);
+    
   }
 
 }
