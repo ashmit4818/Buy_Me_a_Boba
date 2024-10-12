@@ -81,7 +81,7 @@ exports.createOrder = async () => {
 }
 
 exports.capturePayment = async (orderId) => {
-    const accessToken = await generateAccessToken()
+    const accessToken = await generateAccessToken() 
 
     const response = await axios({
         url: process.env.PAYPAL_BASE_URL + `/v2/checkout/orders/${orderId}/capture`,
