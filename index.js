@@ -44,7 +44,7 @@ app.get('/complete-order', async (req, res) => {
             <html lang="en">
             <head>
                 <title>Order Confirmation - BuyMeABoba</title>
-                <link rel="stylesheet" href="/styles.css"> <!-- Include your CSS file -->
+                <link rel="stylesheet" href="/css/style.css"> 
             </head>
             <body class="background on-surface-text">
                 <header class="top-bar">
