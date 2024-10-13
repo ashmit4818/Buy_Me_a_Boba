@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <%- include('../layouts/head' , {title : "BuyMeaBoba"}) %>
+    <%- include('head' , {title : "BuyMeaBoba"}) %>
 </head>
 <body class="background on-surface-text">
     <!-- header -->
@@ -47,12 +47,12 @@
              <div class="container lg-col-2">
 
                 <!-- contribute -->
-                <section class="card elevated contribute">
+                <section class="card outlined elevated contribute">
                     <h2 class="title-medium">
                         Show your love to ashmit
                     </h2>
 
-                    <form class="contribute-form" data-contribute-form>
+                    <form action="/pay" method="POST" class="contribute-form" data-contribute-form>
                         <div class="counter-wrapper">
                             <div class="body-medium on-surface-variant-text counter-label">
                                 <span class="material-symbols-rounded primary-text icon-small">
@@ -141,17 +141,17 @@
 
                         <ul class="social-list">
                             <li>
-                                <a href="" target="_blank" class="social-link">
+                                <a href="https://x.com/ashmitdevio" target="_blank" class="social-link">
                                     <img src="/images/x.svg" width="24" height="24" alt="x">
                                 </a>
                             </li>
                             <li>
-                                <a href="" target="_blank" class="social-link">
+                                <a href="https://www.instagram.com/ashhmiit/" target="_blank" class="social-link">
                                     <img src="/images/instagram.svg" width="24" height="24" alt="instagram">
                                 </a>
                             </li>
                             <li>
-                                <a href="" target="_blank" class="social-link">
+                                <a href="https://discordapp.com/users/ashmit4818/" target="_blank" class="social-link">
                                     <img src="/images/discord.svg" width="24" height="24" alt="">
                                 </a>
                             </li>

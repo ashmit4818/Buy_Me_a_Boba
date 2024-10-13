@@ -41,50 +41,6 @@
 
     $counterField.addEventListener('input', updateTotal.bind($counterField));
 
-    /**
-     * submit contribute form
-     */
-
-    const /** @type {HTMLElement} */ contributeForm = document.querySelector('[data-contribute-form]');
-    const /** @type {HTMLElement} */ submitBtn = document.querySelector('[data-submit-btn]');
-
-    contributeForm.addEventListener('submit', async function(e) {
-        e.preventDefault();
-        try{
-            submitBtn.setAttribute('disabled', '');
-            
-            //3 data form field
-            const formFields = document.querySelectorAll('[data-form-field]');
-
-            const formData ={}
-
-            formFields.forEach(item => {
-                formData[item.getAttribute('name')] = item.value.trim();
-            })
-
-            const response = await fetch('/checkout', {
-                method: 'POST',
-                body: new URLSearchParams(formData).toString(),
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded'
-                }
-            });
-
-            if(response.ok) {
-                const responseData = await response.json();
-                console.log(responseData);
-            }else{
-                console.error('Form submission failed: ', response.statusText);
-            }
-
-
-        }catch(err){
-            console.error(err);
-            throw err;
-        }finally{
-            submitBtn.removeAttribute('disabled', '');
-        }
-    })
-
+    
     
 })();
