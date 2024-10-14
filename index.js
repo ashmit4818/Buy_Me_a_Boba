@@ -36,7 +36,44 @@ app.get('/complete-order', async (req, res) => {
     try {
         await paypal.capturePayment(req.query.token)
 
-        res.send('Boba Donated successfully')
+        
+
+        // Send the HTML response
+        res.send(`
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <title>Order Confirmation - BuyMeABoba</title>
+                <link rel="stylesheet" href="/styles.css"> <!-- Include your CSS file -->
+            </head>
+            <body class="background on-surface-text">
+                <header class="top-bar">
+                    <div class="container">
+                        <a href="/" class="logo">
+                            <img src="/images/bobaaa.png" width="120" alt="Buy Me a Boba logo">
+                        </a>
+                    </div>
+                </header>
+                <main class="main">
+                    <article>
+                        <section class="container">
+                            <h1 class="title-large">Thank You for Your Contribution!</h1>
+                            <p class="body-medium">Your order has been processed successfully.</p>
+                            
+                            <div class="button-container">
+                                <a href="/" class="button filled label-large">Go Back</a>
+                            </div>
+                        </section>
+                    </article>
+                </main>
+                <footer class="footer">
+                    <div class="container">
+                        <p class="body-medium on-surface-variant-text">&copy; 2024 Buy Me A Boba</p>
+                    </div>
+                </footer>
+            </body>
+            </html>
+        `);
     } catch (error) {
         res.send('Error: ' + error)
     }
